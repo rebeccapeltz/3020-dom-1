@@ -18,10 +18,10 @@ $(document).ready(event => {
       itemInput.val('')
       $(':checkbox').change(function (event) {
 
-        if ($(this).siblings("label").css("text-decoration") === "line-through") {
-          $(this).siblings("label").css("text-decoration", "")
-        } else {
+        if ($(this).siblings("label").css("text-decoration").indexOf("none") > -1) {
           $(this).siblings("label").css("text-decoration", "line-through")
+        } else {
+          $(this).siblings("label").css("text-decoration", "none")
         }
       })
     }
