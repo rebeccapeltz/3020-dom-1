@@ -17,14 +17,13 @@ $(document).ready(event => {
       $('.todo-list')[0].appendChild(newItemEl);
       itemInput.val('')
       $(':checkbox').change(function (event) {
-
-        if ($(this).siblings("label").css("text-decoration").indexOf("none") > -1) {
-          $(this).siblings("label").css("text-decoration", "line-through")
-        } else {
-          $(this).siblings("label").css("text-decoration", "none")
-        }
+          event.preventDefault()
+          if ($(this).is(':checked')) {
+            $(this).siblings("label").css("text-decoration", "line-through")
+          } else {
+            $(this).siblings("label").css("text-decoration", "none")
+          }
       })
     }
   })
-
 })
