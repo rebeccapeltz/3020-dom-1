@@ -1,6 +1,8 @@
-html {
+html,body {
   box-sizing: border-box;
   font-family: Abel;
+  margin:0;
+  padding:0;
 }
 h1 {
   text-align:left;
@@ -9,7 +11,7 @@ button{
     background-color: white;
     border: none;
     color: black;
-    padding: 8px 20px;
+    padding: 8px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -43,10 +45,12 @@ input {
     color: gray;
     border-radius: 5px;
 }
+.todo-list {
+  padding:0;
+}
 
 .todo-list li{
   list-style-type:none;
- 
 }
 
 input[type=checkbox], input[type=radio] {
